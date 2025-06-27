@@ -1,2 +1,5 @@
 # Intermediate files
 .terraform
+
+# State files
+*tfstate*
