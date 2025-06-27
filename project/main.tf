@@ -17,11 +17,10 @@ variable "github_token" {
   sensitive = true
 }
 
-
 # What exists
 resource "github_repository" "this_repository" {
   name = "porsgrunn-iac-intro"
-  visibility = "private"
+  visibility = "public"
 }
 
 # What to return
