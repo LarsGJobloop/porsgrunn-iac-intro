@@ -3,3 +3,6 @@
 
 # State files
 *tfstate*
+
+# Variables
+*.tfvars

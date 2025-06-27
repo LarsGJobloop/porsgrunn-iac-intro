@@ -8,8 +8,15 @@ terraform {
 }
 
 provider "github" {
-  token = "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"
+  token = var.github_token
 }
+
+# What is requrired
+variable "github_token" {
+  type = string
+  sensitive = true
+}
+
 
 # What exists
 resource "github_repository" "this_repository" {
@@ -17,6 +24,7 @@ resource "github_repository" "this_repository" {
   visibility = "private"
 }
 
+# What to return
 output "repository" {
   value = github_repository.this_repository.html_url
 }
